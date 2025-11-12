@@ -1,0 +1,33 @@
+<textarea name="nazwa" cols="95" rows="40" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 31 – Telefon</title>
+</head>
+<body>
+<script type="text/javascript">
+  
+  var telefon = {
+    siec:  '5G',
+    model: 'Galaxy S24',
+    numer: '+48 600 123 456'
+  };
+
+  
+  telefon.ocena = 4.6;
+
+  
+  function telefon_pokaz_ptaszynski() {
+    document.write('Ocena telefonu: ' + telefon.ocena + ' / 5<br><br>');
+  }
+
+  
+  telefon_pokaz_ptaszynski();
+  document.write('Nazwa obiektu: telefon<br>');
+  document.write('Nowe pole: ocena<br>');
+  document.write('Nazwa nowej metody: telefon_pokaz_ptaszynski()<br>');
+  document.write('Komplet pól (po rozszerzeniu): siec, model, numer, ocena<br>');
+</script>
+</body>
+</html>

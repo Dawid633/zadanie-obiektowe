@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 26 – Dawid Ptaszyński</title>
+<style>
+    body {
+        background-color: rgb(192,192,192);
+        color: rgb(20,0,252);
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+
+<script>
+        function Pow_ptaszynski(a_ptaszynski, b_ptaszynski, h_ptaszynski) {
+        var pole_ptaszynski = ((a_ptaszynski + b_ptaszynski) / 2) * h_ptaszynski;
+        return pole_ptaszynski;
+    }
+
+    
+    function Obw_ptaszynski(a_ptaszynski, b_ptaszynski, h_ptaszynski) {
+        var roznica_ptaszynski = Math.abs(a_ptaszynski - b_ptaszynski) / 2;
+        var ramie_ptaszynski = Math.sqrt(Math.pow(roznica_ptaszynski, 2) + Math.pow(h_ptaszynski, 2));
+        var obwod_ptaszynski = a_ptaszynski + b_ptaszynski + 2 * ramie_ptaszynski;
+        return obwod_ptaszynski;
+    }
+
+    var a_ptaszynski = parseFloat(prompt("Podaj długość dolnej podstawy a [cm]:"));
+    var b_ptaszynski = parseFloat(prompt("Podaj długość górnej podstawy b [cm]:"));
+    var h_ptaszynski = parseFloat(prompt("Podaj wysokość h [cm]:"));
+
+    var pole_ptaszynski = Pow_ptaszynski(a_ptaszynski, b_ptaszynski, h_ptaszynski);
+    var obwod_ptaszynski = Obw_ptaszynski(a_ptaszynski, b_ptaszynski, h_ptaszynski);
+
+    document.write("<h2>Zadanie 26 – Dawid Ptaszyński</h2>");
+    document.write("a = " + a_ptaszynski + " [cm]" + "<br>");
+    document.write("b = " + b_ptaszynski + " [cm]" + "<br>");
+    document.write("h = " + h_ptaszynski + " [cm]" + "<br><br>");
+
+    document.write("Pole trapezu P = ((a + b) / 2) * h = " + pole_ptaszynski.toFixed(2) + " [cm²]" + "<br>");
+    document.write("Obwód trapezu O = a + b + 2 * √(((|a - b|)/2)² + h²) = " + obwod_ptaszynski.toFixed(2) + " [cm]" + "<br>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 30 – Telefon</title>
+</head>
+<body>
+<script type="text/javascript">
+  
+  var telefon = {
+    siec:  '5G',
+    model: 'Galaxy S24',
+    numer: '+48 600 123 456',
+
+    
+    Telefon_wyswietl_ptaszynski: function () {
+      document.write('Sieć: ' + this.siec + '<br>');
+      document.write('Model: ' + this.model + '<br>');
+      document.write('Numer: ' + this.numer + '<br><br>');
+    }
+  };
+
+  
+  telefon.Telefon_wyswietl_ptaszynski();
+  document.write('Nazwa obiektu: telefon<br>');
+  document.write('Pola (właściwości): siec, model, numer<br>');
+  document.write('Nazwa metody: Telefon_wyswietl_ptaszynski()<br>');
+</script>
+</body>
+</html>

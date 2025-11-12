@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 32 – Telefon (nr 27)</title>
+</head>
+<body>
+<script type="text/javascript">
+function Telefon(siec, model, numer, producent) {
+  this.siec = siec;
+  this.model = model;
+  this.numer = numer;
+  this.producent = producent;
+}
+
+Telefon.prototype.telefon_wyswietl_ptaszynski = function () {
+  document.write(
+    'Sieć: ' + this.siec +
+    ', Model: ' + this.model +
+    ', Numer: ' + this.numer +
+    ', Producent: ' + this.producent + '<br>'
+  );
+};
+
+var telefon1 = new Telefon('5G', 'Galaxy S24',  '+48 600 123 456', 'Samsung');
+var telefon2 = new Telefon('5G', 'iPhone 15',   '+48 601 234 567', 'Apple');
+var telefon3 = new Telefon('4G', 'Pixel 8a',    '+48 602 345 678', 'Google');
+
+document.write('<b>Dostęp do pól (bezpośrednio):</b><br>');
+document.write('telefon1.model = ' + telefon1.model + ', telefon1.siec = ' + telefon1.siec + '<br>');
+document.write('telefon2.model = ' + telefon2.model + ', telefon2.siec = ' + telefon2.siec + '<br>');
+document.write('telefon3.model = ' + telefon3.model + ', telefon3.siec = ' + telefon3.siec + '<br><br>');
+
+document.write('<b>Dane wszystkich telefonów (metoda z prototypu):</b><br>');
+telefon1.telefon_wyswietl_ptaszynski();
+telefon2.telefon_wyswietl_ptaszynski();
+telefon3.telefon_wyswietl_ptaszynski();
+</script>
+
+<br>
+Programowanie obiektowe – Dawid Ptaszyński (nr 27) – Obiekt: Telefon
+</body>
+</html>
